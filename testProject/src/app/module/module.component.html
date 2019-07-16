@@ -1,0 +1,23 @@
+<h3>Module</h3>
+
+<table>
+  <tr>
+    <th>Name English</th>
+    <th>Name Bangla</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let module of modules">
+    <td>{{ module.nameEn }}</td>
+    <td>{{ module.nameBn }}</td>
+    <td><a [title]="Details" [routerLink]="['/module', module.oid]">
+        Details
+      </a>
+    </td>
+
+  </tr>
+
+</table>
+
+
+
+

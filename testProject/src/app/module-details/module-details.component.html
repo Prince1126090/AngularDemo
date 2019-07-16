@@ -1,0 +1,40 @@
+<a [title]="Details" [routerLink]="['/']">
+  Module List
+</a>
+<div>
+<table>
+  <tr>
+    <th>Oid</th>
+    <th>Name English</th>
+    <th>Name Bangla</th>
+  </tr>
+  <tr>
+    <td>{{module?.oid}}</td>
+    <td>{{ module?.nameEn }}</td>
+    <td>{{ module?.nameBn }}</td>
+
+  </tr>
+</table><br/>
+
+<div *ngIf = "module">
+  <form (ngSubmit)="edit(module)" #moduleForm="ngForm">
+
+    <td><label for="nameEn">Name English</label>
+      <input type="text" id="nameEn"
+             required [(ngModel)]="module.nameEn" name="nameEn"></td>
+
+    <td><label for="nameBn">Name Bangla</label>
+      <input type="text" id="nameBn"
+             required [(ngModel)]="module.nameBn" name="nameBn"></td>
+
+    <td>
+      <button type="submit">Save</button>
+    </td>
+
+  </form>
+</div>
+
+</div>
+
+
+
