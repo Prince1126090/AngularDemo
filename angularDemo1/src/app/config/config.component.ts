@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ModuleService} from '../module.service';
+import {ConfigService} from '../config.service';
 
 @Component({
   selector: 'app-config',
@@ -10,7 +10,7 @@ export class ConfigComponent implements OnInit {
 
   configs: any[];
 
-  constructor(private moduleService: ModuleService) {
+  constructor(private moduleService: ConfigService) {
 
   }
 
